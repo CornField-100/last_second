@@ -1,14 +1,14 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/last_second_db
-    username: postgres
+    username: kiend
     password: dang
   jpa:
     hibernate:
       ddl-auto: validate
   liquibase:
     enabled: true
-    change-log: classpath:db/changelog/db.change-log_master.yaml
+    change-log: classpath:db-changelog/db.change-log_master.yaml
 server:
   ssl:
     key-store-type: PKCS12
@@ -16,3 +16,6 @@ server:
     key-store-password: Dc271105
     key-alias: baeldung
   port: 8443
+  error:
+    whitelabel:
+      enabled: false
