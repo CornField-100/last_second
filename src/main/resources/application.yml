@@ -1,1 +1,18 @@
-spring.application.name=lastsecond
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/last_second_db
+    username: postgres
+    password: dang
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.change-log_master.yaml
+server:
+  ssl:
+    key-store-type: PKCS12
+    key-store: C:\JAVA\lastsecond\src\main\resources\baeldung.p12
+    key-store-password: Dc271105
+    key-alias: baeldung
+  port: 8443
