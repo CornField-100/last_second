@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: 1
-      author: yourname
+      author: your_name
       changes:
         - createTable:
             tableName: flight_booking
